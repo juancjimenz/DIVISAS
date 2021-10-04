@@ -11,44 +11,42 @@
 <body>
 
     <div class="form-container">
-        <form class="w-50 mx-auto mt-5" >
-            <div class="form-group">
-                <label for=""><strong>Cantidad de dinero</strong></label>
-                <input type="text" class="form-control" id="inputMonto">
+        <form class="w-50 mx-auto" id="form">
+            <div class="form-group py-5">
+                <label for="">Cantidad</label>
+                <input type="number" class="form-control" id="inputCantidad">
             </div>
-            <div class="row py-2 d-flex justify-content-between">
-                <div class="form-group col-3">
-                    <label for=""><strong>Elige tu moneda</strong></label>
-                    <input type="text" class="form-control" id="inputMoneda1" list="datalisOption">
-                    <datalist id="datalisOption">
-                        <option value="COP">
-                        <option value="MXN">
-                        <option value="USD">
-                        <option value="EUR">
-                        <option value="GBP">
-                    </datalist>
-                </div>
-                <div class="form-group col-3">
-                    <label for=""><strong>Elige tu moneda</strong></label>
-                    <input type="text" class="form-control" id="inputMoneda1" list="datalisOption2">
-                    <datalist id="datalisOption2">
-                        <option value="COP2">
-                        <option value="MXN2">
-                        <option value="USD2">
-                        <option value="EUR2">
-                        <option value="GBP2">
-                    </datalist>
-                </div>
-                <div class="d-inline col-3 py-3">
-                    <button type="button" class="btn btn-lg btn-primary w-100" disabled>Enviar</button>
-                </div>
+            <div class="form-group py-2">
+                <label for="">Pais 1</label>
+                <input type="text" class="form-control" id="moneda1" list="divisa1">
+                <datalist id="divisa1">
+                    <option value="COP">
+                    <option value="MXN">
+                    <option value="USD">
+                    <option value="EUR">
+                    <option value="GBP">
+                </datalist>
             </div>
-        </form>
-
+            <div class="form-group py-2">
+                <label for="">Pais 2</label>
+                <input type="text" class="form-control" id="moneda2" list="divisa2">
+                <datalist id="divisa2">
+                    <option value="COP">
+                    <option value="MXN">
+                    <option value="USD">
+                    <option value="EUR">
+                    <option value="GBP">
+                </datalist>
+            </div>
+            <div class="container py-5">
+                <button type="submit" class="btn btn-danger" id="bntEnviar" onclick="calcular()">Calcular</button>
+            </div>
+            <h1 id="resu"></h1>
+        </form> 
     </div>
 
-    
     <!-- JavaScript Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <script src="./script/index.js"></script>
 </body>
 </html>
