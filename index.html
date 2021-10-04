@@ -9,16 +9,17 @@
     <title>Conversor de Divisas</title>
 </head>
 <body>
-
-    <div class="form-container">
-        <form class="w-50 mx-auto" id="form">
-            <div class="form-group py-5">
-                <label for="">Cantidad</label>
-                <input type="number" class="form-control" id="inputCantidad">
+<div class=" container w-50 py-5 rounded">
+    <div class="form-container bg-info">
+        <form class="row" id="form">
+            <header class="containerImg  w-50">
+            </header>
+            <div class="form-group">
+                <input type="number" class="form-control" id="inputCantidad" placeholder="Cantidad de Dinero:">
             </div>
-            <div class="form-group py-2">
-                <label for="">Pais 1</label>
-                <input type="text" class="form-control" id="moneda1" list="divisa1">
+            <div class="form-group">
+                <label for=""></label>
+                <input type="text" class="form-control" id="moneda1" list="divisa1" placeholder="Elige tu moneda">
                 <datalist id="divisa1">
                     <option value="COP">
                     <option value="MXN">
@@ -27,9 +28,9 @@
                     <option value="GBP">
                 </datalist>
             </div>
-            <div class="form-group py-2">
-                <label for="">Pais 2</label>
-                <input type="text" class="form-control" id="moneda2" list="divisa2">
+            <div class="form-group">
+                <label for=""></label>
+                <input type="text" class="form-control" id="moneda2" list="divisa2" placeholder="Elige tu moneda">
                 <datalist id="divisa2">
                     <option value="COP">
                     <option value="MXN">
@@ -39,12 +40,13 @@
                 </datalist>
             </div>
             <div class="container py-5">
-                <button type="submit" class="btn btn-danger" id="bntEnviar" onclick="calcular()">Calcular</button>
+                <button type="submit" class="btn btn-danger" id="bntEnviar" onclick="calcular()">Convertir</button>
             </div>
-            <h1 id="resu"></h1>
+            <div id="resu">
+            </div>
         </form> 
     </div>
-
+</div>
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
     <script src="./script/index.js"></script>
