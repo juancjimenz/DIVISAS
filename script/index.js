@@ -25,9 +25,13 @@ function calcular() {
     Moneda1 = document.getElementById('moneda1').value;
     Moneda2 = document.getElementById('moneda2').value;
 
-    document.getElementById('resu').innerHTML=(calcularDinero(montoReal,Moneda1,Moneda2)).toFixed(2)
+    if (typeof calcularDinero(montoReal,Moneda1,Moneda2)=='number') {
+        document.getElementById('resu').innerHTML=('Tu saldo es de: $'+(calcularDinero(montoReal,Moneda1,Moneda2)).toFixed(2))
+    }else{
+        document.getElementById('resu').innerHTML=(calcularDinero(montoReal,Moneda1,Moneda2))
+    }
 }
-//FALTA COLOCAR EL ERROR 
+ 
 function calcularDinero(montoReal,Moneda1,Moneda2) {
    //DIVISA COLOMBIANA
     if(Moneda1 == 'COP' && Moneda2 == 'USD'){
@@ -62,6 +66,9 @@ function calcularDinero(montoReal,Moneda1,Moneda2) {
         pais2 = copgbp
         resultado =  montoReal/pais2 
         return resultado   
+    }else if(Moneda1 == 'COP' && Moneda2 == 'COP'){
+        resultado =  'DIVISAS IGUALES' 
+        return resultado 
     }
     //DIVISA MEXICANA
     else if(Moneda1 == 'MXN' && Moneda2 == 'USD'){
@@ -88,6 +95,9 @@ function calcularDinero(montoReal,Moneda1,Moneda2) {
         pais2 = mxngbp
         resultado =  montoReal/pais2 
         return resultado   
+    }else if(Moneda1 == 'MXN' && Moneda2 == 'MXN'){
+        resultado =  'DIVISAS IGUALES' 
+        return resultado 
     }
     //DIVISA EEUU
     else if(Moneda1 == 'USD' && Moneda2 == 'EUR'){
@@ -106,6 +116,9 @@ function calcularDinero(montoReal,Moneda1,Moneda2) {
         pais2 = usdgbp
         resultado =  montoReal/pais2 
         return resultado   
+    }else if(Moneda1 == 'USD' && Moneda2 == 'USD'){
+        resultado =  'DIVISAS IGUALES' 
+        return resultado 
     }
     //DIVISA EUROPA
     else if(Moneda1 == 'EUR' && Moneda2 == 'GBP'){
@@ -116,6 +129,12 @@ function calcularDinero(montoReal,Moneda1,Moneda2) {
         pais2 = eurgbp
         resultado =  montoReal/pais2 
         return resultado   
+    }else if(Moneda1 == 'EUR' && Moneda2 == 'EUR'){
+        resultado =  'DIVISAS IGUALES' 
+        return resultado 
+    }else if(Moneda1 == 'GBP' && Moneda2 == 'GBP'){
+        resultado =  'DIVISAS IGUALES' 
+        return resultado 
     }
 }
 
