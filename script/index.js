@@ -26,7 +26,7 @@ function calcular() {
     Moneda2 = document.getElementById('moneda2').value;
 
     if (typeof calcularDinero(montoReal,Moneda1,Moneda2)=='number') {
-        document.getElementById('resu').innerHTML=('Tu saldo es de: $'+(calcularDinero(montoReal,Moneda1,Moneda2)).toFixed(2))
+        document.getElementById('resu').innerHTML=((calcularDinero(montoReal,Moneda1,Moneda2)).toFixed(2))
     }else{
         document.getElementById('resu').innerHTML=(calcularDinero(montoReal,Moneda1,Moneda2))
     }
